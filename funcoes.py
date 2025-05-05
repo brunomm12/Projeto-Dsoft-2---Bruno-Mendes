@@ -67,3 +67,23 @@ def calcula_pontos_sequencia_baixa (rolados):
     
     return 0
 ##############################################
+def calcula_pontos_sequencia_alta(lista):
+    
+    lista_o = []
+
+    for num in lista:
+        if num not in lista_o:
+            lista_o.append(num)
+
+    
+    if len(lista_o)<5:
+        return 0
+
+    lista_o = sorted(lista_o)
+
+    for i in range(len(lista_o)-1):
+        proximo = lista_o[i] + 1
+        if lista_o[i+1] != proximo:
+            return 0
+    return 30
+##########################################
