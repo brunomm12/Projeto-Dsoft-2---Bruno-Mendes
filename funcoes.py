@@ -102,3 +102,20 @@ def calcula_pontos_full_house(rolados):
     else:
         return 0 
     ########################################
+    def calcula_pontos_quadra (rolados):
+
+    lista_o = sorted(rolados)
+
+        
+    for i in range(len(lista_o)-3):
+        
+        condicao = lista_o[i] == lista_o[i+1] == lista_o[i+2] == lista_o[i+3] 
+
+        if condicao:
+            soma = 0
+            for num in lista_o:
+                soma += num
+            return soma
+    
+    return 0
+##########################################
