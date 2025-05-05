@@ -10,3 +10,13 @@ def rolar_dados(n):
         rolados.append(n_randomico)
 
     return rolados
+#######################################
+def guardar_dado(rol,guard,ind):
+
+    valor = rol[ind]
+    guard.append(valor)
+
+    del(rol[ind])
+
+    return [rol, guard]
+########################################
