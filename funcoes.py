@@ -105,7 +105,7 @@ def calcula_pontos_full_house(rolados):
 def calcula_pontos_quadra (rolados):
 
     lista_o = sorted(rolados)
-    
+
         
     for i in range(len(lista_o)-3):
         
@@ -119,3 +119,29 @@ def calcula_pontos_quadra (rolados):
     
     return 0
 ##########################################
+def calcula_pontos_quina (rolados):
+
+    lista_o = sorted(rolados)
+
+        
+    for i in range(len(lista_o)-4):
+        
+        condicao = lista_o[i] == lista_o[i+1] == lista_o[i+2] == lista_o[i+3] == lista_o[i+4]
+
+        if condicao:
+           return 50  
+    return 0
+############################################
+def calcula_pontos_quina (rolados):
+
+    lista_o = sorted(rolados)
+
+        
+    for i in range(len(lista_o)-4):
+        
+        condicao = lista_o[i] == lista_o[i+1] == lista_o[i+2] == lista_o[i+3] == lista_o[i+4]
+
+        if condicao:
+           return 50  
+    return 0
+
