@@ -102,7 +102,7 @@ def calcula_pontos_full_house(rolados):
     else:
         return 0 
     ########################################
-    def calcula_pontos_quadra (rolados):
+def calcula_pontos_quadra (rolados):
 
     lista_o = sorted(rolados)
 
