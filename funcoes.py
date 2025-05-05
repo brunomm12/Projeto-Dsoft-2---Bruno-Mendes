@@ -28,3 +28,12 @@ def remover_dado(rol,guard,ind):
 
     return [rol, guard]
 #########################################
+def calcula_pontos_regra_simples (rolados):
+
+    resposta = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
+
+    for numero in rolados:
+        resposta[numero] += numero
+    
+    return resposta
+##########################################
