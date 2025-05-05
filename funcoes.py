@@ -87,3 +87,18 @@ def calcula_pontos_sequencia_alta(lista):
             return 0
     return 30
 ##########################################
+def calcula_pontos_full_house(rolados):
+
+    lista_o = sorted(rolados)
+
+    condição1 = lista_o[0] == lista_o[1] and lista_o[2] == lista_o[3] == lista_o[4] and lista_o[0] != lista_o[3]
+    condiçao2 = lista_o[3] == lista_o[4] and lista_o[0] == lista_o[1] == lista_o[2] and lista_o[0] != lista_o[3]
+
+    if condição1 or condiçao2:
+        soma = 0 
+        for n in lista_o:
+            soma += n
+        return soma
+    else:
+        return 0 
+    ########################################
