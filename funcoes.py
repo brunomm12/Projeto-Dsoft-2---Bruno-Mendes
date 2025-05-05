@@ -105,7 +105,7 @@ def calcula_pontos_full_house(rolados):
 def calcula_pontos_quadra (rolados):
 
     lista_o = sorted(rolados)
-
+    
         
     for i in range(len(lista_o)-3):
         
