@@ -45,3 +45,25 @@ def calcula_pontos_soma (rolados):
         soma += num
     return soma
 ########################################
+def calcula_pontos_sequencia_baixa (rolados):
+
+    lista_o = []
+
+    for num in rolados:
+        if num not in lista_o:
+            lista_o.append(num)
+    
+    lista_o = sorted(lista_o)
+
+    if len(lista_o)<4:
+        return 0
+
+    for i in range(len(lista_o) - 3):
+
+        cond1 = lista_o[i+1] == lista_o[i] + 1 and lista_o[i+2] == lista_o[i] + 2 and lista_o[i+3] == lista_o[i] + 3
+        
+        if cond1:
+            return 15
+    
+    return 0
+##############################################
