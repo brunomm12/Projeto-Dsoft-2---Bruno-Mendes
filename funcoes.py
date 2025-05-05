@@ -20,3 +20,11 @@ def guardar_dado(rol,guard,ind):
 
     return [rol, guard]
 ########################################
+def remover_dado(rol,guard,ind):
+    valor = guard[ind]
+    rol.append(valor)
+
+    del(guard[ind])
+
+    return [rol, guard]
+#########################################
