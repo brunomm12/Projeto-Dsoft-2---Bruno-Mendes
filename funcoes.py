@@ -145,3 +145,24 @@ def calcula_pontos_quina (rolados):
            return 50  
     return 0
 
+###########################################
+def calcula_pontos_regra_avancada (lista):
+   
+    return {
+    'cinco_iguais': calcula_pontos_quina(lista),
+    'full_house': calcula_pontos_full_house(lista),
+    'quadra': calcula_pontos_quadra(lista) ,
+    'sem_combinacao':calcula_pontos_soma(lista) ,
+    'sequencia_alta': calcula_pontos_sequencia_alta(lista) ,
+    'sequencia_baixa': calcula_pontos_sequencia_baixa(lista)
+    }
+################################################
+def calcula_pontos_regra_simples (rolados):
+
+    resposta = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
+
+    for numero in rolados:
+        resposta[numero] += numero
+    
+    return resposta
+###############################################
