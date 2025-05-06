@@ -157,12 +157,26 @@ def calcula_pontos_regra_avancada (lista):
     'sequencia_baixa': calcula_pontos_sequencia_baixa(lista)
     }
 ################################################
-def calcula_pontos_regra_simples (rolados):
+def faz_jogada(dados, cat, cartela):
 
-    resposta = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
+    nums= ['1','2','3','4','5','6']
 
-    for numero in rolados:
-        resposta[numero] += numero
+    if cat in nums:
+        cat = int(cat)
     
-    return resposta
+    if cat in cartela['regra_simples']:
+        
+        pontos = calcula_pontos_regra_simples(dados)
+        
+        cartela['regra_simples'][cat] = pontos[cat]
+
+    
+    elif cat in cartela['regra_avancada']:
+       
+        pontos = calcula_pontos_regra_avancada(dados)
+        
+        cartela['regra_avancada'][cat] = pontos[cat]
+
+    
+    return cartela
 ###############################################
